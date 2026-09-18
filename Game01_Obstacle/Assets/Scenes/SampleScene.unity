@@ -958,6 +958,7 @@ GameObject:
   - component: {fileID: 1053127708}
   - component: {fileID: 1053127707}
   - component: {fileID: 1053127706}
+  - component: {fileID: 1053127709}
   m_Layer: 0
   m_Name: Obstacle 3
   m_TagString: Untagged
@@ -1057,6 +1058,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053127704}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1053127709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053127704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607f09d746b9c3c42bb8f8559df7572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
 --- !u!1 &1070556591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1238,7 @@ GameObject:
   - component: {fileID: 1618308600}
   m_Layer: 0
   m_Name: Bobby the Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,7 +1360,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1618308600
 MonoBehaviour:
@@ -1374,6 +1387,8 @@ GameObject:
   - component: {fileID: 1620642335}
   - component: {fileID: 1620642334}
   - component: {fileID: 1620642333}
+  - component: {fileID: 1620642339}
+  - component: {fileID: 1620642338}
   - component: {fileID: 1620642337}
   m_Layer: 0
   m_Name: Dropping Object
@@ -1410,7 +1425,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620642332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1468,7 +1483,7 @@ Transform:
   m_GameObject: {fileID: 1620642332}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.97, y: 7.38, z: 8.5}
+  m_LocalPosition: {x: -2.97, y: 10.93, z: 8.05}
   m_LocalScale: {x: 2.1363, y: 1.4594, z: 1.5468}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1486,7 +1501,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dba7862df443ed43a4cecb6633d294e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dropper
-  timeToWait: 3
+  timeToWait: 2
+--- !u!114 &1620642338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620642332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607f09d746b9c3c42bb8f8559df7572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
+--- !u!54 &1620642339
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620642332}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1743987995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1553,7 @@ GameObject:
   - component: {fileID: 1743987999}
   - component: {fileID: 1743987998}
   - component: {fileID: 1743987997}
+  - component: {fileID: 1743988000}
   m_Layer: 0
   m_Name: Obstacle 2
   m_TagString: Untagged
@@ -1598,6 +1653,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743987995}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1743988000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743987995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607f09d746b9c3c42bb8f8559df7572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
 --- !u!1 &1973372859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1677,7 @@ GameObject:
   - component: {fileID: 1973372863}
   - component: {fileID: 1973372862}
   - component: {fileID: 1973372861}
+  - component: {fileID: 1973372864}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -1709,6 +1777,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973372859}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1973372864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973372859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607f09d746b9c3c42bb8f8559df7572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
 --- !u!1 &1978808919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1801,7 @@ GameObject:
   - component: {fileID: 1978808923}
   - component: {fileID: 1978808922}
   - component: {fileID: 1978808921}
+  - component: {fileID: 1978808924}
   m_Layer: 0
   m_Name: Obstacle 4
   m_TagString: Untagged
@@ -1820,6 +1901,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978808919}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1978808924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978808919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607f09d746b9c3c42bb8f8559df7572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
 --- !u!1 &2047741497
 GameObject:
   m_ObjectHideFlags: 0
